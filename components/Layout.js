@@ -4,7 +4,7 @@ import Link from "next/link";
 import {Store} from "../utils/Store";
 
 export default function Layout({title, children}) {
-    const { state, dispatch } = useContext(Store);
+    const { state } = useContext(Store);
     const { cart } = state
     return (
         <div>
@@ -20,7 +20,7 @@ export default function Layout({title, children}) {
                             <a className='text-lg font-bold'>amazona</a>
                         </Link>
                         <div>
-                            <Link href="/card">
+                            <Link href="/cart">
                                 <a className="p-2">
                                     Card
                                     {cart.cartItems.length > 0 && (
