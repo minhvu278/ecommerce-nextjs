@@ -22,7 +22,7 @@ export default function Layout({title, children}) {
                         <div>
                             <Link href="/cart">
                                 <a className="p-2">
-                                    Card
+                                    Cart
                                     {cart.cartItems.length > 0 && (
                                         <span className="ml-1 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white">
                                             {cart.cartItems.reduce((a, b) => a + b.quantity, 0)}

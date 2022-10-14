@@ -25,7 +25,7 @@ export default function ProductScreen() {
             return
         }
 
-        dispatch({ type: 'CARD_ADD_ITEM', payload: {...product, quantity}})
+        dispatch({ type: 'CART_ADD_ITEM', payload: {...product, quantity}})
     }
     return (
         <Layout title={product.name}>
