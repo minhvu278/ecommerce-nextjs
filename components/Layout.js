@@ -4,9 +4,9 @@ import Link from "next/link";
 import {Store} from "../utils/Store";
 
 export default function Layout({title, children}) {
-    const { state } = useContext(Store);
+    const { state } = useContext(Store)
     const { cart } = state
-    const [cartItemsCount, setCartItemsCount] = useState(0);
+    const [cartItemsCount, setCartItemsCount] = useState(0)
     useEffect(() => {
         setCartItemsCount(cart.cartItems.reduce((a, b) => a + b.quantity, 0))
     }, [cart.cartItems])
